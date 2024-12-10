@@ -1,5 +1,5 @@
 document.getElementById('saveButton').addEventListener('click', function () {
-  var name = document.getElementById('nameInput').value;
+  let name = document.getElementById('nameInput').value;
   localStorage.setItem('savedName', name);
   document.getElementById('savedName').innerText =  `Ciao ${name}!`;
 });
@@ -13,7 +13,7 @@ document.getElementById('removeButton').addEventListener('click', function () {
 
 
 window.onload = function () {
-  var savedName = localStorage.getItem('savedName');
+  let savedName = localStorage.getItem('savedName');
   if (savedName) {
     document.getElementById('savedName').innerText = savedName;
     document.getElementById('nameInput').value = savedName;
